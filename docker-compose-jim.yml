@@ -12,6 +12,10 @@ services:
       HUMHUB_DB_USER: humhub
       HUMHUB_DB_PASSWORD: humhub
       SET_PJAX: "true"
+      PHP_POST_MAX_SIZE: "2G"
+      PHP_UPLOAD_MAX_FILESIZE: "2G"
+      # set internal nginx client max body size to unlimited
+      NGINX_CLIENT_MAX_BODY_SIZE: "0"
     restart: always
     depends_on:
       - db
