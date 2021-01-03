@@ -8,6 +8,7 @@ services:
       - "./config:/var/www/localhost/htdocs/protected/config"
       - "./uploads:/var/www/localhost/htdocs/uploads"
       - "./modules:/var/www/localhost/htdocs/protected/modules"
+      - "./patch/showFiles.php:/var/www/localhost/htdocs/protected/humhub/modules/file/widgets/views/showFiles.php:ro"
     environment:
       HUMHUB_DB_USER: humhub
       HUMHUB_DB_PASSWORD: humhub
